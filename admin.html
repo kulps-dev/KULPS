@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KULPS | Admin</title>
+
+  <!--================= Favicon =================-->
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.png">
+  <!--================= Vendor CSS =================-->
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/vendor/fontawesome-5.css">
+  <link rel="stylesheet" href="assets/css/vendor/all.min.css">
+  <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/vendor/plyr.css">
+  <link rel="stylesheet" href="assets/css/vendor/splitting.css">
+  <link rel="stylesheet" href="assets/css/vendor/socicon.css">
+  <link rel="stylesheet" href="assets/css/vendor/swiper.min.css">
+  <link rel="stylesheet" href="assets/fonts/custom-font.css">
+  <!--================= Base Site Style =================-->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!--================= Admin App Style =================-->
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body data-theme="light" data-menu="fixed">
+  <!--================= Header (как на главной) =================-->
+  <div id="top" class="home"></div>
+  <div class="main-header js-main-header auto-hide-header menu-left header--sticky menu-center" data-blur="on">
+    <div class="main-header__layout">
+      <div class="main-header__inner">
+
+        <div class="main-header__logo">
+          <div class="logo-dark">
+            <a href="index.html">
+              <img src="assets/images/logo/logo-light.svg" alt="KULPS - Автоматизация бизнес процессов, внедрение CRM и ERP систем">
+            </a>
+          </div>
+          <div class="logo-light">
+            <a href="index.html">
+              <img src="assets/images/logo/logo-dark.svg" alt="KULPS - Автоматизация бизнес процессов, внедрение CRM и ERP систем">
+            </a>
+          </div>
+        </div>
+
+        <nav class="main-header__nav js-main-header__nav main-header__default" id="main-header-nav">
+          <ul id="primary-menu-default" class="navbar-nav">
+            <li class="menu-item menu-item-has-children"><a href="./index.html"><span>Главная</span></a></li>
+            <li class="menu-item menu-item-has-children">
+              <a href="./about.html"><span>О Нас</span></a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="contact.html">Контакты</a></li>
+                <li class="menu-item"><a href="requisites.html">Реквизиты</a></li>
+              </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+              <a href="./services.html"><span>Решения</span></a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="">Проекты</a></li>
+                <li class="menu-item"><a href="services.html">Сервисы</a></li>
+                <li class="menu-item"><a href="">Услуги</a></li>
+              </ul>
+            </li>
+            <li class="menu-item menu-item-has-children"><a href="./blog.html"><span>Блог</span></a></li>
+            <li class="menu-item menu-item-has-children"><a href="./shop.html"><span>Каталог</span></a></li>
+          </ul>
+        </nav>
+
+        <div class="main-header__widgets">
+
+          <div class="main-header--widgets">
+
+            <div class="ms_theme_mode ms-h_w">
+              <div class="ms_tm--inner">
+                <div class="theme-toggle" id="theme-toggle">
+                  <input type="checkbox" id="switcher" class="check" checked="">
+                  <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                    <mask class="moon" id="moon-mask">
+                      <rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+                      <circle cx="24" cy="10" r="6" fill="black"></circle>
+                    </mask>
+                    <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"></circle>
+                    <g class="sun-beams" stroke="currentColor">
+                      <line x1="12" y1="1" x2="12" y2="3"></line>
+                      <line x1="12" y1="21" x2="12" y2="23"></line>
+                      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                      <line x1="1" y1="12" x2="3" y2="12"></line>
+                      <line x1="21" y1="12" x2="23" y2="12"></line>
+                      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="header__search-icon ms-h_w">
+              <svg width="24" height="24" viewBox="0 0 24 24"><path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#4F5663" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M21 21L16.65 16.65" stroke="#4F5663" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+
+            <!-- Иконка аккаунта — ведет в админку -->
+            <a class="main-header__account ms-h_w" href="./admin.html" title="Админ-панель" aria-label="Админ-панель">
+              <span class="header__account-icon ms-h_w" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle><path d="M4 20a8 8 0 0 1 16 0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              </span>
+            </a>
+
+          </div>
+
+          <div class="ms-h_w">
+            <a href="./cart.html" class="main-header__cart">
+              <div class="header__cart-icon">
+                <svg fill="none" viewBox="0 0 54 62">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.96" d="M14.142 18.175v-2.771c0-6.428 5.17-12.742 11.599-13.342 7.656-.743 14.113 5.285 14.113 12.799v3.942M3.602 43.573l.657 5.343c.629 5.6 2.686 10.2 14.17 10.2h17.142c11.484 0 13.541-4.6 14.141-10.2l2.143-17.141c.771-6.97-1.229-12.656-13.427-12.656H15.573c-12.2 0-14.2 5.685-13.428 12.656m34.835-1.228h.026m-20.024 0h.026"></path>
+                </svg>
+                <div id="mini-cart-count" class="header__cart-count"></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="header__search-modal data-scroll-section">
+            <button class="header__search--close-btn">
+              <svg class="icon icon--sm" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="3" x2="21" y2="21"></line><line x1="21" y1="3" x2="3" y2="21"></line></g></svg>
+            </button>
+            <div class="header__search--inner">
+              <form role="search" method="get" class="searchform" action="#">
+                <div class="ms-search-widget">
+                  <input type="search" placeholder="Поиск" value="" name="s" class="search-field" required>
+                  <button aria-label="Search" class="ms-search--btn" type="submit"></button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="main-header__nav-trigger js-main-header__nav-trigger menu-default" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-header-nav">
+          <i class="main-header__nav-trigger-icon" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!--================= /Header =================-->
+
+  <!--================= Admin App =================-->
+  <main class="ms-main admin-app">
+    <div class="app-shell">
+      <!-- Sidebar (приложение) -->
+      <aside class="app-aside" id="appAside">
+        <nav class="aside-nav">
+          <a class="nav-link active" data-page="#dash"><i class="fa fa-th-large"></i><span>Обзор</span></a>
+          <a class="nav-link" data-page="#services"><i class="fa fa-cubes"></i><span>Сервисы</span></a>
+          <a class="nav-link" data-page="#blog"><i class="fa fa-newspaper"></i><span>Блог</span></a>
+          <a class="nav-link" data-page="#products"><i class="fa fa-boxes"></i><span>Товары</span></a>
+          <a class="nav-link" data-page="#orders"><i class="fa fa-receipt"></i><span>Заказы</span></a>
+          <a class="nav-link" data-page="#customers"><i class="fa fa-users"></i><span>Клиенты</span></a>
+          <a class="nav-link" data-page="#messages"><i class="fa fa-comments"></i><span>Сообщения</span></a>
+          <a class="nav-link" data-page="#pages"><i class="fa fa-file-alt"></i><span>Страницы</span></a>
+          <a class="nav-link" data-page="#media"><i class="fa fa-images"></i><span>Медиа</span></a>
+          <a class="nav-link" data-page="#menu"><i class="fa fa-bars"></i><span>Меню</span></a>
+          <a class="nav-link" data-page="#seo"><i class="fa fa-search"></i><span>SEO</span></a>
+          <a class="nav-link" data-page="#settings"><i class="fa fa-sliders-h"></i><span>Настройки</span></a>
+        </nav>
+      </aside>
+
+      <!-- Content -->
+      <section class="app-content" id="appContent">
+        <!-- Обзор -->
+        <div class="page card" id="dash">
+          <div class="card-head"><h3>Обзор</h3></div>
+          <div class="card-body">
+            <div class="kpi-grid">
+              <div class="kpi"><div class="kpi-title">Заказы</div><div class="kpi-val" id="kpiOrders">0</div></div>
+              <div class="kpi"><div class="kpi-title">Выручка</div><div class="kpi-val" id="kpiRevenue">0 ₽</div></div>
+              <div class="kpi"><div class="kpi-title">Посты</div><div class="kpi-val" id="kpiPosts">0</div></div>
+              <div class="kpi"><div class="kpi-title">Товары</div><div class="kpi-val" id="kpiProducts">0</div></div>
+            </div>
+            <div class="row-2 gap-16 margin-top-24">
+              <div class="box">
+                <div class="box-title">Последние заказы</div>
+                <div id="dashLastOrders" class="mini-list"></div>
+              </div>
+              <div class="box">
+                <div class="box-title">Последние сообщения</div>
+                <div id="dashLastMsgs" class="mini-list"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Сервисы -->
+        <div class="page card" id="services" hidden>
+          <div class="card-head">
+            <h3>Сервисы</h3>
+            <div class="head-actions">
+              <input id="srvSearch" class="control control-sm" placeholder="Поиск">
+              <button class="btn primary btn-sm" id="srvAdd"><i class="fa fa-plus"></i>Добавить</button>
+            </div>
+          </div>
+          <div class="card-body"><div id="srvList" class="table-list"></div></div>
+        </div>
+
+        <!-- Блог -->
+        <div class="page card" id="blog" hidden>
+          <div class="card-head">
+            <h3>Блог</h3>
+            <div class="head-actions">
+              <select id="postStatus" class="control control-sm"><option value="all">Все</option><option value="draft">Черновики</option><option value="published">Опубликованные</option></select>
+              <input id="postSearch" class="control control-sm" placeholder="Поиск">
+              <button class="btn primary btn-sm" id="postAdd"><i class="fa fa-plus"></i>Новая статья</button>
+            </div>
+          </div>
+          <div class="card-body"><div id="postList" class="table-list"></div></div>
+        </div>
+
+        <!-- Товары -->
+        <div class="page card" id="products" hidden>
+          <div class="card-head">
+            <h3>Товары</h3>
+            <div class="head-actions">
+              <select id="prdFilter" class="control control-sm"><option value="all">Все</option><option value="active">Активные</option><option value="hidden">Скрытые</option><option value="out">Нет в наличии</option></select>
+              <input id="prdSearch" class="control control-sm" placeholder="Поиск">
+              <button class="btn primary btn-sm" id="prdAdd"><i class="fa fa-plus"></i>Добавить товар</button>
+            </div>
+          </div>
+          <div class="card-body"><div id="prdList" class="table-list"></div></div>
+        </div>
+
+        <!-- Заказы -->
+        <div class="page card" id="orders" hidden>
+          <div class="card-head">
+            <h3>Заказы</h3>
+            <div class="head-actions">
+              <select id="ordFilter" class="control control-sm"><option value="all">Все</option><option value="new">Новый</option><option value="paid">Оплачен</option><option value="shipped">Отправлен</option><option value="delivered">Доставлен</option><option value="cancelled">Отменён</option></select>
+              <input id="ordSearch" class="control control-sm" placeholder="Поиск # / email">
+            </div>
+          </div>
+          <div class="card-body"><div id="ordList" class="table-list"></div></div>
+        </div>
+
+        <!-- Клиенты -->
+        <div class="page card" id="customers" hidden>
+          <div class="card-head">
+            <h3>Клиенты</h3>
+            <div class="head-actions">
+              <input id="custSearch" class="control control-sm" placeholder="Поиск">
+              <button class="btn primary btn-sm" id="custAdd"><i class="fa fa-user-plus"></i>Добавить</button>
+            </div>
+          </div>
+          <div class="card-body"><div id="custList" class="table-list"></div></div>
+        </div>
+
+        <!-- Сообщения -->
+        <div class="page card" id="messages" hidden>
+          <div class="card-head"><h3>Сообщения</h3></div>
+          <div class="card-body no-pad">
+            <div class="msg-layout">
+              <div class="threads">
+                <div class="threads-head"><input id="msgSearch" class="control control-sm" placeholder="Поиск диалогов"></div>
+                <div id="threadList" class="thread-list"></div>
+              </div>
+              <div class="chat">
+                <div id="chatHead" class="chat-head"></div>
+                <div id="chatBody" class="chat-body"></div>
+                <div class="chat-send">
+                  <textarea id="chatInput" class="control" rows="2" placeholder="Написать ответ..."></textarea>
+                  <button id="chatSend" class="btn primary btn-sm"><i class="fa fa-paper-plane"></i>Отправить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Страницы -->
+        <div class="page card" id="pages" hidden>
+          <div class="card-head">
+            <h3>Страницы</h3>
+            <div class="head-actions">
+              <input id="pgSearch" class="control control-sm" placeholder="Поиск">
+              <button class="btn primary btn-sm" id="pgAdd"><i class="fa fa-plus"></i>Новая страница</button>
+            </div>
+          </div>
+          <div class="card-body"><div id="pgList" class="table-list"></div></div>
+        </div>
+
+        <!-- Медиа -->
+        <div class="page card" id="media" hidden>
+          <div class="card-head">
+            <h3>Медиа</h3>
+            <div class="head-actions">
+              <button class="btn primary btn-sm" id="mdAdd"><i class="fa fa-upload"></i>Загрузить</button>
+              <input id="mdSearch" class="control control-sm" placeholder="Поиск">
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="uploader-area" id="mdDrop">
+              <div class="uploader-hint"><i class="fa fa-cloud-upload-alt"></i> Перетащите изображения сюда или нажмите</div>
+              <input id="mdInput" type="file" accept="image/*" multiple>
+            </div>
+            <div id="mdGrid" class="media-grid"></div>
+          </div>
+        </div>
+
+        <!-- Меню -->
+        <div class="page card" id="menu" hidden>
+          <div class="card-head">
+            <h3>Меню</h3>
+            <div class="head-actions"><button class="btn primary btn-sm" id="mnAdd"><i class="fa fa-plus"></i>Добавить пункт</button></div>
+          </div>
+          <div class="card-body"><div id="mnList" class="table-list"></div></div>
+        </div>
+
+        <!-- SEO -->
+        <div class="page card" id="seo" hidden>
+          <div class="card-head"><h3>SEO</h3></div>
+          <div class="card-body">
+            <form id="seoForm" class="row-2">
+              <label class="field"><span>Глобальный Title</span><input name="title" class="control"></label>
+              <label class="field"><span>Глобальный Description</span><input name="desc" class="control"></label>
+              <label class="field"><span>OG Image</span><input name="og" class="control"></label>
+              <label class="field"><span>Шаблон постов</span><input name="postTpl" class="control"></label>
+              <div class="actions"><button class="btn primary btn-sm"><i class="fa fa-save"></i>Сохранить</button></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Настройки -->
+        <div class="page card" id="settings" hidden>
+          <div class="card-head"><h3>Настройки</h3></div>
+          <div class="card-body">
+            <form id="setForm" class="row-2">
+              <label class="field"><span>Название сайта</span><input name="site" class="control" value="KULPS"></label>
+              <label class="field"><span>Email поддержки</span><input name="email" class="control" value="info@kulps.dev"></label>
+              <label class="field"><span>Телефон</span><input name="phone" class="control" value="+7 (993) 970-97-07"></label>
+              <label class="check"><input name="chat" type="checkbox" checked><span>Виджет чата включен</span></label>
+              <label class="check"><input name="index" type="checkbox" checked><span>Индексация включена</span></label>
+              <div class="actions">
+                <button class="btn primary btn-sm" type="submit"><i class="fa fa-save"></i>Сохранить</button>
+                <button class="btn ghost btn-sm" id="exportAll" type="button"><i class="fa fa-download"></i>Экспорт JSON</button>
+                <label class="btn ghost btn-sm" for="importAll"><i class="fa fa-upload"></i>Импорт JSON</label>
+                <input id="importAll" type="file" accept="application/json" hidden>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- Drawer -->
+    <div id="drawer" class="drawer">
+      <div class="drawer-panel">
+        <div class="drawer-head">
+          <div id="drawerTitle" class="drawer-title">Редактор</div>
+          <button id="drawerClose" class="icon-btn"><i class="fa fa-times"></i></button>
+        </div>
+        <div id="drawerBody" class="drawer-body"></div>
+      </div>
+      <div id="drawerMask" class="drawer-mask"></div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast">Готово</div>
+  </main>
+
+  <!--================= Scripts =================-->
+  <script src="assets/js/vendor/jquery.min.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

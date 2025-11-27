@@ -1,0 +1,270 @@
+/* ==========================================================================
+   Requisites Page Styles (assets/css/requisites.css)
+   ========================================================================== */
+
+/* ========== HERO ========== */
+.banner-area.inner {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0 60px;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+/*.banner-area.inner::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(173,255,2,0.06) 0%, transparent 35%),
+    radial-gradient(circle at 80% 70%, rgba(173,255,2,0.05) 0%, transparent 40%),
+    repeating-linear-gradient(0deg, rgba(125,125,125,0.04) 0 2px, transparent 2px 20px);
+  filter: blur(0.5px);
+  animation: req-bgFloat 16s linear infinite;
+  pointer-events: none;
+}*/
+@keyframes req-bgFloat {
+  0%   { transform: translate3d(0,0,0) rotate(0.0001deg) }
+  50%  { transform: translate3d(-2%, -2%, 0) rotate(0.0001deg) }
+  100% { transform: translate3d(0,0,0) rotate(0.0001deg) }
+}
+.banner-area.inner .heading-title {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  background: linear-gradient(90deg, var(--color-contrast-higher), #adff02, var(--color-contrast-higher));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  font-family: 'Montserrat', Arial, sans-serif;
+  animation: req-titleShine 7s linear infinite;
+}
+@keyframes req-titleShine {
+  0%   { background-position: 0% 50% }
+  50%  { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+/* ========== GLASS CARDS ========== */
+.widget-box {
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 24px;
+  padding: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.68), rgba(255,255,255,0.4));
+  backdrop-filter: blur(10px) saturate(1.4);
+  -webkit-backdrop-filter: blur(10px) saturate(1.4);
+  border: 1px solid rgba(173, 255, 2, 0.12);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+  transition: transform .3s var(--ease-out), box-shadow .3s var(--ease-out), border-color .3s;
+  will-change: transform;
+  transform-style: preserve-3d;
+  font-family: 'Montserrat', Arial, sans-serif;    
+}
+[data-theme="dark"] .widget-box {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border-color: rgba(173,255,2,0.08);
+}
+.widget-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+  border-color: rgba(173, 255, 2, 0.2);
+}
+.widget-box .heading-title { 
+    margin-bottom: 10px; 
+    font-family: 'Montserrat', Arial, sans-serif;    
+}
+.widget-box.background .desc { color: var(--color-contrast-medium); }
+
+/* Компактный режим для левых блоков */
+.widget-box.compact { padding: 16px 16px; }
+.widget-box.compact .heading-title { 
+    margin-bottom: 6px; 
+    font-family: 'Montserrat', Arial, sans-serif;    
+}
+.widget-box.compact .desc { margin-bottom: 10px; font-size: 14px;font-family: 'Montserrat', Arial, sans-serif;     }
+.widget-box.compact .req-list li,
+.widget-box.compact .req-extra li {
+  padding: 10px 6px; gap: 10px;
+  font-family: 'Montserrat', Arial, sans-serif;    
+}
+.widget-box.compact .req-key   { 
+    font-size: 13px; 
+    font-family: 'Montserrat', Arial, sans-serif;
+
+}
+.widget-box.compact .req-value { 
+    font-size: 15px; 
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* ========== REQUISITES LISTS ========== */
+.req-list, .req-extra, .req-contacts { list-style: none; margin: 0; padding: 0; }
+.req-list li, .req-extra li, .req-contacts li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  padding: 14px 10px;
+  border-bottom: 1px dashed var(--color-contrast-low);
+  transform: translateY(0);
+  transition: background-color .25s ease, transform .25s ease;
+  will-change: transform;
+  opacity: 0; /* GSAP показывает при скролле */
+}
+.req-list li:last-child, .req-extra li:last-child, .req-contacts li:last-child { border-bottom: none; }
+.req-list li:hover, .req-extra li:hover, .req-contacts li:hover {
+  background-color: hsla(var(--color-contrast-low-h), var(--color-contrast-low-s), var(--color-contrast-low-l), .28);
+  transform: translateY(-1px);
+}
+.req-key   { 
+    color: var(--color-contrast-medium); 
+    font-size: 14px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+.req-value { 
+    font-weight: 700; 
+    color: var(--color-contrast-higher); 
+    text-align: right; 
+    word-break: break-word; 
+    font-variant-numeric: tabular-nums;
+    font-family: 'Montserrat', Arial, sans-serif;
+
+ }
+
+/* Контакты шире, одна строка на десктопе */
+.req-contacts li { grid-template-columns: auto 1fr auto; column-gap: 14px; }
+@media (min-width: 1200px) {
+  .req-contacts .req-value { white-space: nowrap; }
+}
+
+/* ========== COPY BUTTON / RIPPLE ========== */
+.req-copy {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 40px;
+  background: rgba(173,255,2,0.12);
+  color: var(--color-contrast-higher);
+  font-size: 13px;
+  border: 1px solid rgba(173,255,2,0.25);
+  transition: transform .2s ease, filter .2s ease, background .2s ease, border-color .2s ease;
+  overflow: hidden;
+  isolation: isolate;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.req-copy:hover { filter: contrast(.96); }
+.req-copy:active { transform: translateY(1px); }
+.req-copy::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  transform: scale(0);
+  background: radial-gradient(circle at var(--x,50%) var(--y,50%), rgba(173,255,2,0.22), transparent 45%);
+  transition: transform .35s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+.req-copy.rippling::after { transform: scale(1.5); }
+
+/* В контактах — компактная иконка копирования */
+.req-contacts .req-copy {
+  padding: 8px; min-width: 36px; width: 36px; height: 36px; border-radius: 50%; font-size: 0;
+}
+.req-contacts .req-copy i { font-size: 16px; }
+.req-contacts .req-tooltip { right: 64px; }
+
+/* ========== ACTIONS ========== */
+.req-actions { 
+    display: flex; 
+    gap: 10px; 
+    margin-top: 30px; 
+    flex-wrap: wrap; 
+    margin-bottom: 30px; 
+}
+.req-actions .btn { 
+    border-radius: 40px; 
+    font-size: 14px;
+    height: auto;
+    width: auto;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* ========== TOOLTIP / TOAST ========== */
+.req-tooltip {
+  position: absolute;
+  right: 90px; top: 50%; transform: translateY(-50%);
+  background: var(--color-contrast-high); color: var(--color-contrast-lower);
+  font-size: 12px; padding: 6px 10px; border-radius: 8px;
+  opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.req-tooltip.show { opacity: 1; transform: translateY(calc(-50% - 6px)); }
+
+.req-toast {
+  position: fixed; left: 20px; bottom: 20px;
+  background: var(--color-contrast-high); color: var(--color-contrast-lower);
+  padding: 10px 14px; border-radius: 12px;
+  opacity: 0; transform: translateY(10px); pointer-events: none;
+  transition: all .25s ease; z-index: 999;
+  box-shadow: 0 12px 28px rgba(0,0,0,.18);
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.req-toast.show { opacity: 1; transform: translateY(0); }
+
+/* ========== 3D TILT ========== */
+.project-area .container { perspective: 1200px; }
+
+/* ========== REDUCED MOTION ========== */
+@media (prefers-reduced-motion: reduce) {
+  .widget-box, .req-list li, .req-extra li, .req-contacts li,
+  .req-copy::after, .req-toast, .req-tooltip,
+  .banner-area.inner::before, .banner-area.inner .heading-title {
+    animation: none !important; transition: none !important;font-family: 'Montserrat', Arial, sans-serif;
+  }
+}
+
+/* ========== PRINT ========== */
+@media print {
+  .main-header, .ms-footer, .back-to-top, .req-actions { display: none !important; }
+  .banner-area.inner { padding: 14px 0; }
+  .heading-title { 
+    font-size: 26px !important; 
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+  .req-list li, .req-extra li, .req-contacts li { padding: 8px 0; opacity: 1 !important; }
+  body { background: #fff !important; color: #000 !important;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* Единый зазор + верх по одной линии + низ по одной линии */
+@media (min-width: 992px) {
+  .project-area { --req-gap: 20px; } /* ваш общий отступ между карточками */
+
+  /* колонки одинаковой высоты */
+  .project-area .row { align-items: stretch; }
+
+  /* Левая колонка: простой стек, равные отступы между карточками */
+  .project-area .col-lg-7 {
+    display: flex;
+    flex-direction: column;              /* ВЕРХ ВЫРОВНЕН */
+  }
+  .project-area .col-lg-7 > .widget-box { margin: 0 0 var(--req-gap); }
+  .project-area .col-lg-7 > .widget-box:last-child { margin-bottom: 0; }
+
+  /* Правая колонка: 3 строки, средняя растягивается,
+     зазоры строго через gap, "Контакты" прижаты к низу */
+  .project-area .col-lg-5 {
+    display: grid;
+    grid-template-rows: auto 1fr auto;   /* верх — контент, середина — растяжка, низ — контент */
+    row-gap: var(--req-gap);
+  }
+  .project-area .col-lg-5 > .widget-box { margin: 0; } /* чтобы gap был точным */
+
+  /* Явно задаём строки (на всякий случай) */
+  #qr-widget       { grid-row: 1; }
+  #quick-actions   { grid-row: 2; }
+  .col-lg-5 > .widget-box:last-child { grid-row: 3; } /* "Контакты" */
+}

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KULPS | Личный кабинет</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.png">
+
+  <!-- Vendor CSS (как на сайте) -->
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/vendor/fontawesome-5.css">
+  <link rel="stylesheet" href="assets/css/vendor/all.min.css">
+  <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/vendor/plyr.css">
+  <link rel="stylesheet" href="assets/css/vendor/splitting.css">
+  <link rel="stylesheet" href="assets/css/vendor/socicon.css">
+  <link rel="stylesheet" href="assets/css/vendor/swiper.min.css">
+  <link rel="stylesheet" href="assets/fonts/custom-font.css">
+
+  <!-- Глобальные стили сайта -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Стили аккаунта -->
+  <link rel="stylesheet" href="assets/css/account.css">
+</head>
+
+<body data-theme="light" data-menu="fixed">
+  <!-- Header как на остальных страницах -->
+  <div id="top" class="home"></div>
+  <div class="main-header js-main-header auto-hide-header menu-left header--sticky menu-center" data-blur="on">
+    <div class="main-header__layout">
+      <div class="main-header__inner">
+        <div class="main-header__logo">
+          <div class="logo-dark">
+            <a href="index.html"><img src="assets/images/logo/logo-light.svg" alt="KULPS"></a>
+          </div>
+          <div class="logo-light">
+            <a href="index.html"><img src="assets/images/logo/logo-dark.svg" alt="KULPS"></a>
+          </div>
+        </div>
+
+        <nav class="main-header__nav js-main-header__nav main-header__default" id="main-header-nav">
+          <ul id="primary-menu-default" class="navbar-nav">
+            <li class="menu-item"><a href="./index.html"><span>Главная</span></a></li>
+            <li class="menu-item menu-item-has-children">
+              <a href="./about.html"><span>О Нас</span></a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="contact.html">Контакты</a></li>
+                <li class="menu-item"><a href="requisites.html">Реквизиты</a></li>
+              </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+              <a href="./services.html"><span>Решения</span></a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="">Проекты</a></li>
+                <li class="menu-item"><a href="services.html">Сервисы</a></li>
+                <li class="menu-item"><a href="">Услуги</a></li>
+              </ul>
+            </li>
+            <li class="menu-item"><a href="./blog.html"><span>Блог</span></a></li>
+            <li class="menu-item"><a href="./shop.html"><span>Каталог</span></a></li>
+          </ul>
+        </nav>
+
+                <div class="main-header__widgets">
+
+                    <div class="main-header--widgets">
+
+                        <div class="ms_theme_mode ms-h_w">
+                            <div class="ms_tm--inner">
+                                <div class="theme-toggle" id="theme-toggle">
+                                    <input type="checkbox" id="switcher" class="check" checked="">
+                                    <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                                        <mask class="moon" id="moon-mask">
+                                            <rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+                                            <circle cx="24" cy="10" r="6" fill="black"></circle>
+                                        </mask>
+                                        <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"></circle>
+                                        <g class="sun-beams" stroke="currentColor">
+                                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header__search-icon ms-h_w">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#4F5663" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path d="M21 21L16.65 16.65" stroke="#4F5663" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>   
+                        
+                        <a class="main-header__account ms-h_w" href="./account.html" title="Личный кабинет" aria-label="Личный кабинет">
+                        <span class="header__account-icon ms-h_w" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="8" r="4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
+                            <path d="M4 20a8 8 0 0 1 16 0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                        </a>
+                        
+                        </div>                  
+                        
+                        <div class="ms-h_w">
+                            <a href="./cart.html" class="main-header__cart">
+                                <div class="header__cart-icon">
+                                    <svg fill="none" viewBox="0 0 54 62">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.96" d="M14.142 18.175v-2.771c0-6.428 5.17-12.742 11.599-13.342 7.656-.743 14.113 5.285 14.113 12.799v3.942M3.602 43.573l.657 5.343c.629 5.6 2.686 10.2 14.17 10.2h17.142c11.484 0 13.541-4.6 14.141-10.2l2.143-17.141c.771-6.97-1.229-12.656-13.427-12.656H15.573c-12.2 0-14.2 5.685-13.428 12.656m34.835-1.228h.026m-20.024 0h.026">
+                                        </path>
+                                    </svg>
+                                    <div id="mini-cart-count" class="header__cart-count"></div>
+                                </div>
+                            </a>
+                        </div>                        
+
+                        <div class="header__search-modal data-scroll-section">
+
+                            <button class="header__search--close-btn">
+                                <svg class="icon icon--sm" viewBox="0 0 24 24">
+                                    <title>Close modal window</title>
+                                    <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="3" y1="3" x2="21" y2="21"></line>
+                                        <line x1="21" y1="3" x2="3" y2="21"></line>
+                                    </g>
+                                </svg>
+                            </button>
+
+                            <div class="header__search--inner">
+
+                                <form role="search" method="get" class="searchform" action="#">
+                                    <div class="ms-search-widget">
+                                        <input type="search" placeholder="Поиск" value="" name="s" class="search-field" required>
+                                        <button aria-label="Search" class="ms-search--btn" type="submit"></button>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+        <button class="main-header__nav-trigger js-main-header__nav-trigger menu-default" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-header-nav">
+          <i class="main-header__nav-trigger-icon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboard -->
+  <main class="ms-main account-app">
+    <div class="account-wrap container">
+      <!-- Sidebar -->
+      <aside class="app-aside" id="appAside">
+        <div class="aside-head">
+          <div class="user">
+            <div class="avatar-spot">
+              <img id="asideAvatar" alt="">
+              <span id="asideAvatarPh" class="ph fa fa-user"></span>
+            </div>
+            <div class="user-text">
+              <div class="hello">Привет,</div>
+              <div class="name" id="helloName">Гость</div>
+            </div>
+          </div>
+          <button class="aside-toggle" id="asideToggle" aria-label="Свернуть"><i class="fa fa-chevron-left"></i></button>
+        </div>
+
+        <nav class="aside-nav">
+          <a class="nav-link active" data-target="#p-profile"><i class="fa fa-user"></i><span>Профиль</span></a>
+          <a class="nav-link" data-target="#p-addresses"><i class="fa fa-map-marker-alt"></i><span>Адреса</span></a>
+          <a class="nav-link" data-target="#p-orders"><i class="fa fa-box"></i><span>Заказы</span></a>
+          <a class="nav-link" data-target="#p-company"><i class="fa fa-building"></i><span>Реквизиты</span></a>
+          <a class="nav-link" data-target="#p-security"><i class="fa fa-lock"></i><span>Безопасность</span></a>
+          <a class="nav-link" data-target="#p-notify"><i class="fa fa-bell"></i><span>Уведомления</span></a>
+          <a class="nav-link" data-target="#p-support"><i class="fa fa-life-ring"></i><span>Поддержка</span></a>
+        </nav>
+
+        <div class="aside-foot">
+          <a href="index.html" class="btn-out"><i class="fa fa-home"></i><span>На главную</span></a>
+        </div>
+      </aside>
+
+      <!-- Content -->
+      <section class="app-content">
+
+        <!-- Quick widgets -->
+        <div class="row quick">
+          <div class="col card quick-card">
+            <div class="q-title">Заказов</div>
+            <div class="q-value" id="qOrders">0</div>
+          </div>
+          <div class="col card quick-card">
+            <div class="q-title">В обработке</div>
+            <div class="q-value" id="qProcessing">0</div>
+          </div>
+          <div class="col card quick-card">
+            <div class="q-title">Доставлено</div>
+            <div class="q-value" id="qDelivered">0</div>
+          </div>
+        </div>
+
+        <!-- Профиль -->
+        <div class="card page" id="p-profile">
+          <div class="card-head">
+            <h3>Профиль</h3>
+          </div>
+          <div class="card-body">
+            <div class="profile-grid">
+              <div class="profile-avatar">
+                <div class="uploader" id="avatarDrop">
+                  <img id="avatarPreview" alt="">
+                  <div class="avatar-placeholder">
+                    <i class="fa fa-camera"></i>
+                    <div>Загрузить аватар</div>
+                    <small>PNG/JPG до 5 МБ</small>
+                  </div>
+                  <input id="avatarInput" type="file" accept="image/*">
+                </div>
+                <button class="btn ghost" id="avatarReset"><i class="fa fa-undo"></i>Сбросить</button>
+              </div>
+
+              <form id="profileForm" class="profile-form">
+                <div class="row-2">
+                  <label class="f">
+                    <span>Имя</span>
+                    <input class="form-control" name="firstName" required>
+                  </label>
+                  <label class="f">
+                    <span>Фамилия</span>
+                    <input class="form-control" name="lastName" required>
+                  </label>
+                  <label class="f">
+                    <span>Email</span>
+                    <input class="form-control" type="email" name="email" required>
+                  </label>
+                  <label class="f">
+                    <span>Телефон</span>
+                    <input class="form-control" type="tel" name="phone" placeholder="+7 (___) ___-__-__">
+                  </label>
+                  <label class="f">
+                    <span>Дата рождения</span>
+                    <input class="form-control" type="date" name="birthday">
+                  </label>
+                  <label class="f">
+                    <span>Пол</span>
+                    <select class="form-control" name="gender">
+                      <option value="">Не указывать</option>
+                      <option value="male">Мужчина</option>
+                      <option value="female">Женщина</option>
+                    </select>
+                  </label>
+                  <label class="f">
+                    <span>Язык</span>
+                    <select class="form-control" name="lang">
+                      <option value="ru">Русский</option>
+                      <option value="en">English</option>
+                    </select>
+                  </label>
+                  <label class="f">
+                    <span>Часовой пояс</span>
+                    <select class="form-control" name="tz">
+                      <option value="Europe/Moscow">Europe/Moscow (UTC+3)</option>
+                      <option value="Asia/Yekaterinburg">Asia/Yekaterinburg (UTC+5)</option>
+                      <option value="Asia/Novosibirsk">Asia/Novosibirsk (UTC+7)</option>
+                    </select>
+                  </label>
+                </div>
+
+                <div class="actions">
+                  <button class="btn primary" type="submit"><i class="fa fa-save"></i>Сохранить</button>
+                  <button class="btn ghost" type="button" id="exportData"><i class="fa fa-download"></i>Выгрузить JSON</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Адреса -->
+        <div class="card page" id="p-addresses" hidden>
+          <div class="card-head"><h3>Адреса</h3></div>
+          <div class="card-body">
+            <div id="addressList" class="address-list"></div>
+
+            <div class="divider"></div>
+
+            <details class="add-block">
+              <summary class="btn ghost"><i class="fa fa-plus"></i>Добавить адрес</summary>
+              <form id="addressForm" class="row-2 add-form">
+                <label class="f"><span>Город</span><input name="city" class="form-control" required></label>
+                <label class="f"><span>Индекс</span><input name="zip" class="form-control" required></label>
+                <label class="f" style="grid-column:1/-1"><span>Адрес</span><input name="line1" class="form-control" required placeholder="Улица, дом, кв."></label>
+                <label class="f"><span>Комментарий</span><input name="comment" class="form-control" placeholder="Подъезд, домофон..."></label>
+                <label class="check">
+                  <input id="addrPrimary" type="checkbox">
+                  <span>Сделать основным</span>
+                </label>
+                <div class="actions" style="grid-column:1/-1">
+                  <button class="btn primary" type="submit"><i class="fa fa-save"></i>Сохранить адрес</button>
+                  <button class="btn ghost" type="reset"><i class="fa fa-eraser"></i>Очистить</button>
+                </div>
+              </form>
+            </details>
+          </div>
+        </div>
+
+        <!-- Заказы -->
+        <div class="card page" id="p-orders" hidden>
+          <div class="card-head">
+            <h3>Заказы</h3>
+            <div class="head-actions">
+              <select id="orderFilter" class="form-control small">
+                <option value="all">Все статусы</option>
+                <option value="new">Новый</option>
+                <option value="paid">Оплачен</option>
+                <option value="shipped">Отправлен</option>
+                <option value="delivered">Доставлен</option>
+                <option value="cancelled">Отменён</option>
+              </select>
+            </div>
+          </div>
+          <div class="card-body">
+            <div id="ordersList" class="orders"></div>
+          </div>
+        </div>
+
+        <!-- Реквизиты -->
+        <div class="card page" id="p-company" hidden>
+          <div class="card-head"><h3>Реквизиты</h3></div>
+          <div class="card-body">
+            <label class="check big">
+              <input id="isCompany" type="checkbox">
+              <span>Я представляю компанию</span>
+            </label>
+
+            <form id="companyForm" class="row-2 company-form" hidden>
+              <label class="f"><span>Наименование</span><input name="orgName" class="form-control" placeholder="ООО «Компания»"></label>
+              <label class="f"><span>ИНН</span><input name="inn" class="form-control"></label>
+              <label class="f"><span>КПП</span><input name="kpp" class="form-control"></label>
+              <label class="f"><span>ОГРН</span><input name="ogrn" class="form-control"></label>
+              <label class="f" style="grid-column:1/-1"><span>Юр. адрес</span><input name="legalAddress" class="form-control"></label>
+              <label class="f"><span>БИК</span><input name="bik" class="form-control"></label>
+              <label class="f"><span>Р/с</span><input name="rs" class="form-control"></label>
+              <label class="f"><span>К/с</span><input name="ks" class="form-control"></label>
+              <label class="f" style="grid-column:1/-1"><span>Подписант</span><input name="signer" class="form-control" placeholder="Должность ФИО, на основании..."></label>
+
+              <div class="actions" style="grid-column:1/-1">
+                <button class="btn primary" type="submit"><i class="fa fa-save"></i>Сохранить</button>
+                <button class="btn ghost" type="button" id="exportRequisites"><i class="fa fa-download"></i>Выгрузить JSON</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Безопасность -->
+        <div class="card page" id="p-security" hidden>
+          <div class="card-head"><h3>Безопасность</h3></div>
+          <div class="card-body">
+            <form id="passwordForm" class="row-2">
+              <label class="f"><span>Текущий пароль</span><input type="password" name="oldPass" class="form-control" autocomplete="current-password" required></label>
+              <label class="f"><span>Новый пароль</span><input type="password" name="newPass" class="form-control" autocomplete="new-password" required></label>
+              <div class="actions" style="grid-column:1/-1"><button class="btn primary"><i class="fa fa-key"></i>Обновить пароль</button></div>
+            </form>
+
+            <div class="divider"></div>
+
+            <label class="check big">
+              <input id="tfaToggle" type="checkbox">
+              <span>Включить двухфакторную аутентификацию (2FA)</span>
+            </label>
+
+            <div id="tfaBlock" class="tfa" hidden>
+              <div class="qr"><span>QR</span></div>
+              <div class="tfa-form">
+                <label class="f"><span>Код</span><input id="tfaCode" class="form-control" placeholder="123 456"></label>
+                <div class="actions">
+                  <button class="btn primary" id="tfaConfirm"><i class="fa fa-check"></i>Подтвердить</button>
+                  <button class="btn ghost" id="tfaReset"><i class="fa fa-eraser"></i>Сбросить</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <h4 class="sub">Активные сессии</h4>
+            <div id="deviceList" class="devices"></div>
+            <div class="actions"><button class="btn ghost" id="logoutOthers"><i class="fa fa-sign-out-alt"></i>Выйти из остальных устройств</button></div>
+          </div>
+        </div>
+
+        <!-- Уведомления -->
+        <div class="card page" id="p-notify" hidden>
+          <div class="card-head"><h3>Уведомления</h3></div>
+          <div class="card-body">
+            <form id="notifyForm" class="row-2">
+              <label class="check"><input id="nEmail" type="checkbox"><span>Email</span></label>
+              <label class="check"><input id="nSMS" type="checkbox"><span>SMS</span></label>
+              <label class="check"><input id="nTG" type="checkbox"><span>Telegram</span></label>
+
+              <label class="f"><span>Частота</span>
+                <select id="nFreq" class="form-control">
+                  <option value="live">Сразу</option>
+                  <option value="daily">Раз в день</option>
+                  <option value="weekly">Раз в неделю</option>
+                </select>
+              </label>
+              <label class="f"><span>Тихие часы</span><input id="nQuiet" class="form-control" placeholder="22:00–08:00"></label>
+
+              <div class="actions" style="grid-column:1/-1">
+                <button class="btn primary" type="submit"><i class="fa fa-save"></i>Сохранить</button>
+                <button class="btn ghost" type="button" id="connectTG"><i class="fa fa-paper-plane"></i>Подключить Telegram-бота</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Поддержка -->
+        <div class="card page" id="p-support" hidden>
+          <div class="card-head"><h3>Поддержка</h3></div>
+          <div class="card-body">
+            <form id="supportForm" class="row-2">
+              <label class="f"><span>Тема</span><input name="subject" class="form-control" required></label>
+              <label class="f"><span>Приоритет</span>
+                <select name="prio" class="form-control"><option>Обычный</option><option>Высокий</option></select>
+              </label>
+              <label class="f" style="grid-column:1/-1"><span>Сообщение</span><textarea name="message" class="form-control" rows="6" placeholder="Опишите вопрос"></textarea></label>
+              <div class="actions" style="grid-column:1/-1">
+                <button class="btn primary" type="submit"><i class="fa fa-paper-plane"></i>Отправить</button>
+                <button class="btn ghost" type="button" id="openChat"><i class="fa fa-comments"></i>Онлайн-чат</button>
+              </div>
+            </form>
+
+            <div class="divider"></div>
+
+            <div class="danger">
+              <div>
+                <div class="danger-title">Удаление аккаунта</div>
+                <div class="muted">Будут удалены персональные данные и история. Отменить нельзя.</div>
+              </div>
+              <button class="btn danger" id="deleteAccount"><i class="fa fa-trash"></i>Удалить</button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="ms-footer ms-footer--template">
+    <div class="container footer-container" data-parallax="on">
+      <div class="footer-inner">
+        <div class="marquee-area contact">
+          <div class="marquee-inner">
+            <ul class="marqueeFooter">
+              <li class="ms-tt__text">CRM & ERP</li>
+              <li class="ms-tt__text img"><img src="assets/images/portfolio/logoSmile.svg" alt=""></li>
+              <li class="ms-tt__text">CRM & ERP</li>
+              <li class="ms-tt__text img"><img src="assets/images/portfolio/logoSmile.svg" alt=""></li>
+              <li class="ms-tt__text">CRM & ERP</li>
+              <li class="ms-tt__text img"><img src="assets/images/portfolio/logoSmile.svg" alt=""></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-title text-center">
+          <div class="row contact">
+            <ul class="col-lg-4 phone"><a class="tag">+7 (993) 970-97-07</a></ul>
+            <ul class="col-lg-4 email">
+              <div class="ms-s-w">
+                <a class="ms-s-i mono s-icon" href=""><i class="fa-brands fa-telegram"></i></a>
+                <a class="ms-s-i mono s-icon" href=""><i class="fa-brands fa-whatsapp"></i></a>
+                <a class="ms-s-i mono s-icon" href=""><i class="fa-brands fa-youtube"></i></a>
+              </div>
+            </ul>
+            <ul class="col-lg-4 email"><a>info@kulps.dev</a></ul>
+          </div>
+        </div>
+        <div class="footer-bottom-area">
+          <ul class="footer-nav-area">
+            <li><a href="">Обработка персональных данных</a></li>
+            <li><a href="./requisites.html">Реквизиты</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast" class="toast">Сохранено</div>
+
+  <!-- Vendor JS -->
+  <script src="assets/js/vendor/jquery.min.js"></script>
+  <script src="assets/js/vendor/fslightbox.js"></script>
+  <script src="assets/js/vendor/gsap.min.js"></script>
+  <script src="assets/js/vendor/isotope.pkgd.min.js"></script>
+  <script src="assets/js/vendor/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/js/vendor/jarallax-video.min.js"></script>
+  <script src="assets/js/vendor/jarallax.min.js"></script>
+  <script src="assets/js/vendor/jquery.justifiedGallery.min.js"></script>
+  <script src="assets/js/vendor/modernizr.js"></script>
+  <script src="assets/js/vendor/splitting.min.js"></script>
+  <script src="assets/js/vendor/splittext.js"></script>
+  <script src="assets/js/vendor/scrollmagic.js"></script>
+  <script src="assets/js/vendor/animate-scrollmagic.js"></script>
+  <script src="assets/js/vendor/smooth-scroll.js"></script>
+  <script src="assets/js/vendor/magnific-popup.js"></script>
+  <script src="assets/js/vendor/locomotive-scroll.min.js"></script>
+  <script src="assets/js/vendor/effect-material.min.js"></script>
+  <script src="assets/js/vendor/triple-slider.js"></script>
+  <script src="assets/js/vendor/plyr.js"></script>
+  <script src="assets/js/vendor/scrolltrigger.min.js"></script>
+  <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script src="assets/js/vendor/video-background.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- JS аккаунта -->
+  <script src="assets/js/account.js"></script>
+
+  <!-- Bitrix24 виджет (как на сайте) -->
+  <script>
+    (function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})
+    (window,document,'https://cdn-ru.bitrix24.ru/b32279648/crm/site_button/loader_1_qvc14l.js');
+  </script>
+</body>
+</html>
