@@ -5,7 +5,4 @@ services:
     container_name: kulps-website
     ports:
       - "80:80"
-      - "443:443"
     restart: unless-stopped
-    volumes:
-      - /etc/letsencrypt/live/kulps.dev:/etc/nginx/ssl:ro
